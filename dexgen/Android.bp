@@ -1,4 +1,4 @@
-// Copyright (C) 2009 The Android Open Source Project
+// Copyright (C) 2010 The Android Open Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,11 +21,8 @@ package {
     default_applicable_licenses: ["dalvik_license"],
 }
 
-java_binary_host {
-    name: "dexdeps",
-    manifest: "etc/manifest.txt",
-    srcs: [
-        "src/**/*.java",
-    ],
-    wrapper: "etc/dexdeps",
+java_library {
+    name: "dexgen",
+    sdk_version: "4",
+    srcs: ["src/**/*.java"],
 }
